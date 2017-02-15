@@ -23,6 +23,8 @@ This data was collected by running 10,000 runs and averaging them for each numbe
 ![Small Number Graph](img/smallGraph.png)
 
 This is the regression information for the smaller graph:
+
+
 ![Small Number Regression](img/smallReg.png)
 
 This was the table used for these graphs:
