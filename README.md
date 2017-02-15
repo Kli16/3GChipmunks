@@ -20,12 +20,12 @@ This data was collected by running 10,000 runs and averaging them for each numbe
  This was then graphed, using [desmos](https://www.desmos.com/calculator), and the built in regression algorithims were used to approximate functions that fit the given data points. The black represents the O(nlogn) approximation, the red O(n), the orange O(n^2), and the purple O(logn). As you can see, the two lines that best fit are the red and black, meaning even for arrays as small as 8192 elements the runtime becomes near linear.
 
 
-![Small Number Graph](img/smallGraph.png)
+![Small Number Graph](.img/smallGraph.png)
 
 This is the regression information for the smaller graph:
 
 
-![Small Number Regression](img/smallReg.png)
+![Small Number Regression](.img/smallReg.png)
 
 This was the table used for these graphs:
 
@@ -50,7 +50,7 @@ This was the table used for these graphs:
 
 Based off this information, it would be easy to assume that the run time could possibly be O(n). However, it can be theoretically approximated to O(logn) by considering only the smaller values of the table. We noticed that the loglinear curve more closely reflected how the values changed over time, even if it was shifted over a bit. While hard to notice with larger numbers, with smaller numbers it became apparent the runtime was not linear, and therefore had to be O(nlogn), backing up what we had theoretically hypothesized as a group.
 
-![Zoomed in Graph](img/zoomedIn.png)
+![Zoomed in Graph](.img/zoomedIn.png)
 
 As a thought experiment, one of us decided to mess around with even larger numbers to calculate the runtimes. In order to successfully run this, more memory needed to be allocated to the JVM, using the command `java -Xmx12G` to allocate 12GB of system memory to the process (this was a tiny bit overkill, but our biggest array did contain 500million elements and the sorting method wasn't the most space efficient. Don't try this without a lot of memory, or running chrome and/or Windows). Instead of running the tests 10K times, since they would take so long to compute they were only run 10 times. This was the result:
 
@@ -64,6 +64,6 @@ As a thought experiment, one of us decided to mess around with even larger numbe
 | 268435456 | 33.0249188564         |
 | 536870912 | 70.03368628129999     |
 
-![Big Graph](img/bigGraph.png)
+![Big Graph](.img/bigGraph.png)
 
 Plotting the points while keeping the best fit equations of the different types as described for the original dataset produces this, which shows the black (O(nlogn)) to be the closest approximation, even for bigger numbers and shows that it is the curve that best fits the change from one point to the next.
