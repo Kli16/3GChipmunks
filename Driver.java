@@ -5,16 +5,16 @@ public class Driver{
 	for( int i = 0; i < length; i++ ){
 	    tester[i] = (int)( Math.random() * 100 );
 	}
-	System.out.println( "Testing length: " + length );
-	MergeSort.printArray( tester );
-        long start = System.currentTimeMillis();
+	System.out.println( "\n\nTesting length: " + length );
+	//MergeSort.printArray( tester );
+        double start = System.currentTimeMillis();
 	MergeSort.sort(tester);
-	long end = System.currentTimeMillis();
-	long time = end-start;
+	double end = System.currentTimeMillis();
+	double time = end-start;
 	System.out.println( "RUNTIME: " + time );
 	System.out.println( "Sorted Array: " );
-	MergeSort.printArray( MergeSort.sort(tester) );
-	System.out.println();
+	//MergeSort.printArray( MergeSort.sort(tester) );
+	System.out.println("********************************************\n\n");
     }
     
     public static void main( String[] args ){
