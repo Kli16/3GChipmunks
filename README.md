@@ -18,6 +18,8 @@ This program contains really large test cases (arrays with 500 million elements!
 This data was collected by running 10,000 runs and averaging them for each number in the first table, and doing 10 runs and averaging them in the second table. These calculations were done on a 3770k running Ubuntu 16.04 and OpenJDK 1.8.0_91  
 
  This was then graphed, using [desmos](https://www.desmos.com/calculator), and the built in regression algorithims were used to approximate functions that fit the given data points. The black represents the O(nlogn) approximation, the red O(n), the orange O(n^2), and the purple O(logn). As you can see, the two lines that best fit are the red and black, meaning even for arrays as small as 8192 elements the runtime becomes near linear.
+ 
+ [Note: In all these graphs the x axis represents the number of elements, and the y axis represents the average evaluation time in seconds]
 
 
 ![Small Number Graph](.img/smallGraph.png)
